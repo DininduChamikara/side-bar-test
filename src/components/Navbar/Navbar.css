@@ -1,20 +1,25 @@
 .navbar {
-    background-color: #060b26;
+    background-color: #132a4c;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
+    position: fixed;
+    z-index: 3;
+    margin-left: 80px;
 }
 
 .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
+    z-index: 0;
 }
 
 .nav-menu {
     color: red;
-    background-color: #060b26;
+    background-color: #18345E;
     width: 80px;
     height: 100vh;
     display: flex;
@@ -23,12 +28,14 @@
     top: 0;
     left: 0%;
     transition: 350ms;
+    z-index: 2;
 }
 
 .nav-menu.active {
     width: 240px;
     left: 0;
     transition: 350ms;
+    z-index: 2;
 }
 
 .nav-text {
@@ -62,47 +69,52 @@
 }
 
 .navbar-toggle {
-    background-color: #060b26;
+    background-color: #132a4c;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
+    z-index: 1;
 }
 
 span {
     margin-left: 16px;
 }
 
+.temp-span-active{
+    white-space: nowrap;
+}
 
 .temp-span-inactive {
+    white-space: nowrap;
     display: none;
 }
 
 .nav-horizontal {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
-    margin-left: 100px;
-    z-index: 1;
+    margin-left: 40px;
+    z-index: 4;
     font-weight: bold;
     display: flex;
+    align-items: center;
 }
 
 .nav-horizontal span:nth-of-type(1) {
-    font-size: 2rem;
     margin-left: -10px;
     padding-right: 25px;
 }
 
 .nav-horizontal span:nth-of-type(2) {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: white;
     margin-left: 0.9rem;
     font-weight: normal;
 }
 
 .nav-horizontal span:nth-of-type(3) {
-    padding-left: 830px;
+    padding-left: 800px;
     display: flex;
     gap: 2rem;
 }
@@ -121,12 +133,3 @@ span {
     margin-right: 0;
 }
 
-.home {
-    display: flex;
-    padding-left: 250px;
-}
-
-.temp-home {
-    display: flex;
-    padding-left: 20px;
-}

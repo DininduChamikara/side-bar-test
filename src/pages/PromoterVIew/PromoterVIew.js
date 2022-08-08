@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PromoterVIew() {
+function PromoterView() {
     return (
         <div className='promoter-view'>
             <h1>Promoter View</h1>
@@ -8,4 +8,4 @@ function PromoterVIew() {
     )
 }
 
-export default PromoterVIew
+export default PromoterView
