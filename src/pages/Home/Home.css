@@ -1,0 +1,54 @@
+.ui.vertical.divider {
+    left: 830px;
+}
+
+.seg {
+    z-index: 1;
+    border: none !important;
+}
+
+.main-image {
+    padding: 1rem;
+    display: block;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    float: right;
+}
+
+.review {
+    display: flex;
+    gap: 30px;
+}
+
+.page-heading {
+    height: 5vh;
+}
+
+h2 {
+    color: #1a83ff;
+    padding: 5px;
+    position: fixed;
+    background: white;
+    z-index: 3;
+}
+
+.image{
+    flex: 1;
+    position: relative;
+    margin: 20px;
+}
+
+.image>*{
+    position: absolute;
+    z-index: 1;
+}
+
+.circle {
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    background-color: #E59393;
+    border-radius: 50%;
+}

@@ -16,19 +16,19 @@ export const SidebarData = [
     },
     {
         title: 'Client View',
-        path: '/client-view',
+        path: '/mainmenu/client-view',
         icon: <BsIcons.BsPersonBoundingBox />,
         cName: 'nav-text'
     },
     {
         title: 'Promoter View',
-        path: '/promoter-view',
+        path: '/mainmenu/promoter-view',
         icon: <HiIcons.HiSpeakerphone />,
         cName: 'nav-text'
     },
     {
         title: 'Payments',
-        path: '/payments',
+        path: '/mainmenu/payments',
         icon: <GiIcons.GiWallet />,
         cName: 'nav-text'
     },

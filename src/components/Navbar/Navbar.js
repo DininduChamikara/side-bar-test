@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Children, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import * as FaIcons from "react-icons/fa";
 import { SidebarData } from '../SidebarData';
 import './Navbar.css';
@@ -10,7 +10,7 @@ import * as GrIcons from "react-icons/gr";
 import * as CgIcons from "react-icons/cg";
 import * as BiIcons from "react-icons/bi";
 
-function Navbar() {
+function Navbar({children}) {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -53,9 +53,13 @@ function Navbar() {
                 </li>
               )
             })}
+
           </ul>
         </nav>
       </IconContext.Provider>
+      <main className={sidebar ? 'main-expanded' : 'main-collapsed' }>
+        {children}
+      </main>
     </>
   )
 }
