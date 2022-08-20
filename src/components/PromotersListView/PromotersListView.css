@@ -1,0 +1,23 @@
+.remaining_iconed_input{
+    width: 11%;
+}
+
+.remaining-field{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.remaining-field-title{
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+.remaining-field-title > span{
+    justify-content: end;
+    padding-right: 2vw;
+    font-weight: bold;
+    color: #336cad;
+}
+

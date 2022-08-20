@@ -4,11 +4,10 @@ import './ClientView.css'
 import campaign_image from '../../img/campaigns.jpg';
 import { Button } from 'semantic-ui-react'
 
-function ClientView() {
 
-    const onClickCreate = () => {
-        window.location.href="/mainmenu/client-view/create_campaign_1";
-    }
+const ClientView = props => {
+
+    console.log(props)
 
     return (
         <div className='client-view'>
@@ -27,10 +26,7 @@ function ClientView() {
                     on a Social Media Platform for your product or service
                 </p>
                 <div className='button-div'>
-                    <a href='mainmenu/client-view/create_campaign=1'>
-
-                    </a>
-                    <Button onClick={onClickCreate} content='Create New Campaign' primary />
+                    <Button onClick={() => props.setClientViewNum(1)} content='Create New Campaign' primary />
                     <Button content='Ongoing Campaigns' secondary />
                 </div>
             </div>

@@ -1,0 +1,77 @@
+.center-heading-cre-camp {
+    color: #18345E;
+    display: block;
+    width: 50%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-heading-cre-camp>h2 {
+    position: static;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    align-items: center;
+}
+
+.page-top {
+    padding-bottom: 4vh;
+}
+
+.radio-span {
+    color: #18345E;
+    font-size: 1.2rem;
+
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+label{
+    font-size: 1.3rem !important;
+}
+
+.form-item{
+    padding-top: 10px;
+    border: #18345E solid 1px;
+    border-radius: 0.5rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: block;
+    align-items: center;
+}
+
+h3{
+    font-weight: bold;
+    color: #18345E;
+    padding-right: 2vw;
+}
+
+.educationcat{
+    padding-left: 5.6vw;
+}
+
+.firstSubHeadingScl {
+    color: #386eab;
+    margin-right: 1.9vw;
+}
+
+.firstSubHeading {
+    color: #386eab;
+}
+
+.advanced-level-cat{
+    padding-left: 23.1vw;
+}
+
+.button-div-3{
+    display: flex;
+    padding: 2.5vw;
+    gap: 0.2vw;
+    width: 40vw;
+}
