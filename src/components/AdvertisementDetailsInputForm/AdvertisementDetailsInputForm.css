@@ -1,0 +1,25 @@
+.iconed_input{
+    width: 100% !important;
+}
+
+.icon{
+    width: 100%;
+}
+
+.form-field{
+    display: flex;
+    align-items: center;
+}
+
+.field-title{
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+.field-title > span{
+    justify-content: end;
+    padding-right: 2vw;
+    font-weight: bold;
+    color: #336cad;
+}
