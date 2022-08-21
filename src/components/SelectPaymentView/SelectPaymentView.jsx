@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import {
     Form, Button, Input, Divider,
-    Checkbox,
-    Grid,
 } from 'semantic-ui-react'
 import './SelectPaymentView.css'
 import * as BsIcons from "react-icons/bs";
+import CardPaymentView from '../CardPaymentView/CardPaymentView';
+import PayOnEarningView from '../PayOnEarningView/PayOnEarningView';
 
 const SelectPaymentView = props => {
 
@@ -14,18 +14,8 @@ const SelectPaymentView = props => {
     const [totoalCost, setTotalCost] = useState(campaignCost + systemFee)
 
 
-    ////////
-    const [showCardPayment, setShowCardPayment] = useState(false)
-
-    const [cardSelected, setCardSelected] = useState(true)
-
-    const setCardPayment = () => {
-        setShowCardPayment(!showCardPayment)
-    }
-
-    const [showOwnEarningPayment, setShowOwnEarningPayment] = useState(false);
-    const setOwnEarningPayment = () => setShowOwnEarningPayment(!showOwnEarningPayment);
-    /////////
+    const [payMethodToggle, setPayMethodToggle] = useState(true)
+    
 
     return (
         <div>
@@ -64,42 +54,32 @@ const SelectPaymentView = props => {
             </div>
             <br />
             <Form>
-
                 <div className="box">
-                    <Form.Group inline>
-                        <label>Select Your Payment Method</label>
-                    </Form.Group>
+                    <div className="choose-button">
+                        <Form.Group inline>
+                            <Button.Group size='large'>
+                                <Button color='blue' onClick={() => setPayMethodToggle(true)}>Card Payment</Button>
+                                <Button.Or />
+                                <Button color='green' onClick={() => setPayMethodToggle(false)}>Pay on Your Earnings</Button>
+                            </Button.Group>
+                        </Form.Group>
+                    </div>
                     <Divider />
-                    <Form.Group inline>
-                        <Form.Field>
-                            <Checkbox label='Card Payment' onClick={setCardPayment} />
-                        </Form.Field>
-                        <Form.Field>
-                            <Checkbox label='Pay on Your Earnings' onClick={setOwnEarningPayment} />
-                        </Form.Field>
-                    </Form.Group>
-                    <Divider />
-                    <div>
+                    <div className="pay-method">
                         {
-                            showCardPayment ?
-                                <div>
-                                    <Form.Group inline>
-                                        <h3>Bank Payment</h3>
-                                    </Form.Group>                                    
+                            payMethodToggle ?
+                                <div className="bank-pay-view">
+                                    <CardPaymentView/>
                                 </div>
-                                : null
-                        }
-                        {
-                            showOwnEarningPayment ?
-                                <div>
-                                    <Form.Group inline>
-                                        <h3>Pay on your earnings</h3>
-                                    </Form.Group>
+                                :
+                                <div className="own-pay-view">
+                                    <PayOnEarningView/>
                                 </div>
-                                : null
                         }
                     </div>
                 </div>
+
+
 
 
                 <div className='button-div-3'>
